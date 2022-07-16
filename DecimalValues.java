@@ -1,45 +1,40 @@
 import java.util.Scanner;
 
-public class SmallLargeNumber {
+public class WeekDays {
 
 	public static void main(String[] args) {
+		Scanner S = new Scanner(System.in);
+		System.out.println("Enter a number : ");
+		int day = S.nextInt();
+		System.out.println("Day Name");
 		
-	double input;
-	Scanner S = new Scanner(System.in);
-	System.out.println("input value : ");
-	input = S.nextDouble();
-	
-	if (input > 0)
-	{
-	if (input < 1) {
-	System.out.println("Positive Small Number");
+		System.out.println(getDayName(day));
 	}
-	else if(input > 1000000) {
-		System.out.println("Positive large number");
-	}
-	else {
-             System.out.println("Positive number");
-         }	
-	}
-	else if (input < 0)
-    {
-        if (Math.abs(input) < 1)
-        {
-            System.out.println("Negative small number");
-        }
-        else if (Math.abs(input) > 1000000)
-        {
-            System.out.println("Negative large number");
-        }
-        else
-        {
-            System.out.println("Negative number");
-        }
-    }
-    else
-    {
-        System.out.println("Zero");
-	
+
+	public static String getDayName(int day) {
+		String dayName = "";
+		switch (day) {
+		case 1: dayName = "Monday"; 
+		break;
+		case 2: dayName = "Tuesday"; 
+		break;
+		case 3: dayName = "Wednesday";
+		break;
+		case 4: dayName = "Thusday";
+		break;
+		case 5: dayName = "Friday";
+		break;
+		case 6: dayName = "Saturday";
+		break;
+		case 7: dayName = "Sunday"; 
+		break;
+		default:dayName = "Invalid day range";
 		}
-	  }
-	}
+		
+		return dayName;
+		
+			}
+		}
+	
+
+
