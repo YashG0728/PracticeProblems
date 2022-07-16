@@ -1,20 +1,29 @@
 import java.util.Scanner;
-public class Exercise8 {
 
-   public static void main(String[] args)
+public class GreaterNumber {
 
-{
-   int i,j,n;
-   System.out.print("Input number of rows : ");
- Scanner in = new Scanner(System.in);
-		    n = in.nextInt();
+	public static void main(String[] args) {
+		
+		int a , b, c;
+		Scanner S = new Scanner(System.in);
+		System.out.println("Input a : ");
+		a = S.nextInt();
+		System.out.println("Input b : ");
+		b = S.nextInt();
+		System.out.println("Input c : ");
+		c = S.nextInt();
 
-   for(i=1;i<=n;i++)
-   {
-	for(j=1;j<=i;j++)
-	  System.out.print(j);
-
-    System.out.println("");
-    }
-}
+		if (a > b)
+		if (a > c) {
+			System.out.println("A is greater ");
+		}	 
+		if (b > c)
+		if (b > a) {
+			System.out.println("B is greater");
+		}
+		if (c > a) 
+		if (c > b) {
+	    	System.out.println("C is greater");
+		}
+	}
 }
